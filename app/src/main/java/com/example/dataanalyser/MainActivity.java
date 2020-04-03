@@ -2,7 +2,9 @@ package com.example.dataanalyser;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,5 +23,14 @@ public class MainActivity extends AppCompatActivity {
         blogin=(Button)findViewById(R.id.login);
         bregister=(Button)findViewById(R.id.register);
         forgot=(TextView) findViewById(R.id.forgot);
+
+        blogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,homePage.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }
