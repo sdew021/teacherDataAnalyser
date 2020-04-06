@@ -11,34 +11,37 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText ephone,epass;
-    Button blogin,bregister;
-    TextView forgot;
+    EditText ephone;
+    Button blogin;
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ephone=(EditText)findViewById(R.id.phone);
-        epass=(EditText)findViewById(R.id.pass);
         blogin=(Button)findViewById(R.id.login);
-        bregister=(Button)findViewById(R.id.register);
-        forgot=(TextView) findViewById(R.id.forgot);
 
         blogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,homePage.class);
-                startActivity(intent);
+                if(checkId(ephone.getText().toString())) {
+                    Constants.teacher.setId(ephone.getText().toString());
+                    startActivity(intent);
+                }else{
+                    ephone.setError("Enter Correct Id");
+                }
             }
         });
 
-        bregister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,register.class);
-                startActivity(intent);
-            }
-        });
+    }
+
+    private boolean checkId(String id) {
+        boolean res = false;
+        if(!id.isEmpty() || !id.trim().equals("") ){
+            res = true;
+        }
+        //TODO : Logic to check if id is registered
+        return res;
     }
 
 }

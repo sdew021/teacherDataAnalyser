@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dataEntry">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="2sp"
+        android:text="Data Entry"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0E375F"
+        android:textColorHighlight="#E7E4E4"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/classLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/classLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Class Details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintBottom_toTopOf="@id/classTaken"/>
+    <EditText
+        android:id="@+id/classTaken"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Number of classes taken"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/classLabel"
+        app:layout_constraintBottom_toTopOf="@id/classTotal"
+        />
+    <EditText
+        android:id="@+id/classTotal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="total number of classes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/classTaken"
+        app:layout_constraintBottom_toTopOf="@id/marksLabel"
+        />
+
+    <TextView
+        android:id="@+id/marksLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Details"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/classTotal"
+        app:layout_constraintBottom_toTopOf="@id/marks1"
+        />
+    <EditText
+        android:id="@+id/marks1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="marks in range 0-10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/marksLabel"
+        app:layout_constraintBottom_toTopOf="@id/marks2"
+        />
+    <EditText
+        android:id="@+id/marks2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="marks in range 10-20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/marks1"
+        app:layout_constraintBottom_toTopOf="@id/marks3"
+        />
+    <EditText
+        android:id="@+id/marks3"
+        android:layout_width="match_parent"
+        android:hint="marks in range 20-30"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/marks2"
+        app:layout_constraintBottom_toTopOf="@id/Update"
+        />
+    <Button
+        android:id="@+id/Update"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="UPDATE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Analyse"
+        app:layout_constraintTop_toBottomOf="@id/marks3"/>
+    <Button
+        android:id="@+id/Analyse"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="ANALYSE"
+        app:layout_constraintStart_toEndOf="@id/Update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/marks3"/>/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

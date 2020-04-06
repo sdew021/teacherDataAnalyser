@@ -43,34 +43,12 @@
         android:layout_height="60dp"
         android:layout_margin="20dp"
         android:hint="phone number"
-        app:layout_constraintBottom_toTopOf="@id/pass"
+        app:layout_constraintBottom_toTopOf="@id/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/icon" />
 
-    <EditText
-        android:id="@+id/pass"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:hint="password"
-        android:layout_margin="20dp"
-        app:layout_constraintBottom_toTopOf="@id/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/phone" />
 
-    <TextView
-        android:id="@+id/forgot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="forgot password?"
-        android:layout_margin="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pass" />
 
     <Button
         android:id="@+id/login"
@@ -79,20 +57,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="login"
-        app:layout_constraintEnd_toStartOf="@id/register"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/forgot" />
-
-    <Button
-        android:id="@+id/register"
-        style="@android:style/Widget.Button"
-        android:layout_width="123dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/login"
-        app:layout_constraintTop_toBottomOf="@id/forgot" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
