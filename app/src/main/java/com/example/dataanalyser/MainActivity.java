@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ephone=(EditText)findViewById(R.id.phone);
         blogin=(Button)findViewById(R.id.login);
+
         blogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 checkId(ephone.getText().toString(),intent);
             }
         });
-
-
     }
 
     private void checkId(final String id, final Intent intent) {

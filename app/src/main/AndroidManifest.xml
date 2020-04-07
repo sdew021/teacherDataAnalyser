@@ -15,13 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".addActivity"></activity>
+        <activity android:name=".addActivity"/>
         <activity android:name=".dataEntry" />
         <activity android:name=".selectSubject" />
         <activity android:name=".subjectList" />
         <activity android:name=".register" />
         <activity android:name=".homePage" />
         <activity android:name=".MainActivity" >
+
         </activity>
     </application>
 
