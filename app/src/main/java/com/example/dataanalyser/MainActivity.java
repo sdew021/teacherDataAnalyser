@@ -39,10 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-<<<<<<< HEAD
 
-        bregister.setOnClickListener(new View.OnClickListener() {
-=======
     }
 
     private void checkId(final String id, final Intent intent) {
@@ -55,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
->>>>>>> 204ae1c981758cf2580be6a7c1eae8ea625f3e21
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {

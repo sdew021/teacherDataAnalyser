@@ -7,6 +7,7 @@
     tools:context=".finalanalysis">
 
     <ScrollView android:layout_height="match_parent"
+        android:id="@+id/scroll"
         android:layout_width="wrap_content"
         tools:ignore="MissingConstraints">
         <RelativeLayout
@@ -64,5 +65,7 @@
 
         </RelativeLayout>
     </ScrollView>
+
+    <include layout="@layout/content_main" />
 
 </RelativeLayout>
