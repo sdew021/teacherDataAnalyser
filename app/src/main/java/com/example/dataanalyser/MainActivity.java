@@ -1,13 +1,25 @@
 package com.example.dataanalyser;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,24 +36,45 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,homePage.class);
-                if(checkId(ephone.getText().toString())) {
-                    Constants.teacher.setId(ephone.getText().toString());
-                    startActivity(intent);
-                }else{
-                    ephone.setError("Enter Correct Id");
-                }
+                checkId(ephone.getText().toString(),intent);
             }
         });
 
     }
 
-    private boolean checkId(String id) {
-        boolean res = false;
-        if(!id.isEmpty() || !id.trim().equals("") ){
-            res = true;
+    private void checkId(final String id, final Intent intent) {
+        if(id.isEmpty() || id.trim().equals("") ){
+            Toast.makeText(this, "Enter Some Value", Toast.LENGTH_SHORT).show();
         }
-        //TODO : Logic to check if id is registered
-        return res;
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference();
+
+
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
+                    Log.e("Child",""+ childDataSnapshot.getKey()); //displays the key for the node
+                    //Log.e("Child1",""+ childDataSnapshot.child("login").getValue());   //gives the value for given keyname
+                    if(id.equals(childDataSnapshot.getKey())){
+                        Log.e("child n","Changed");
+                        Toast.makeText(MainActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
+                        Constants.teacher.setId(id);
+                        startActivity(intent);
+                        return;
+                    }
+                }
+                Toast.makeText(MainActivity.this, "Id not registered", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e("The read failed: " ,databaseError.getMessage());
+            }
+        });
+
     }
 
 }

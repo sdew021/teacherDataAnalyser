@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".addActivity"></activity>
-        <activity android:name=".dataEntry" />
+        <activity android:name=".dataEntry" />3
         <activity android:name=".selectSubject" />
         <activity android:name=".subjectList" />
         <activity android:name=".register" />

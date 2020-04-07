@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -52,7 +53,6 @@ public class subjectList extends AppCompatActivity {
             myTextViews[i] = subjectListText;
             myTextViews[i].setId(i+1);
         }
-        myRef.child(Constants.teacher.getId()).setValue(Constants.teacher);
         final Button next = new Button(this);
         next.setText("NEXT");
         next.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -63,21 +63,35 @@ public class subjectList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 updateSubjects();
-                Log.d("Checkaba", "Added and complete");
-                startActivity(new Intent(subjectList.this,selectSubject.class));
+
             }
 
             private void updateSubjects() {
+                if(!subList.isEmpty()){
+                    subList.clear();
+                }
                 for (int i = 0; i < N; i++) {
                     TextView e = myLinearLayout.findViewById(i + 1);
                     subList.add(e.getText().toString().trim());
+
                 }
-                Constants.teacher.setSubjects(subList);
-                for (String subj : Constants.teacher.getSubjects()) {
-                    myRef.child(Constants.teacher.getId()).child("Subjects").child(subj).setValue(true);
-                    Log.d("Checkaba",subj);
+                if(subList.contains("")){
+                    Log.e("Checkaa", subList.size()+"");
+                    for (String s : subList) {
+                        Log.e("Checkaa", s+" k");
+
+                    }
+                    Toast.makeText(subjectList.this, "Enter Valid Subjects", Toast.LENGTH_SHORT).show();
+                }else {
+                    Constants.teacher.setSubjects(subList);
+                    for (String subj : Constants.teacher.getSubjects()) {
+                        myRef.child(Constants.teacher.getId()).child("Subjects").child(subj).setValue(true);
+                        Log.d("Checkaba", subj);
+                    }
+                    //subList.clear();
+                    Log.d("Checkaba", "Added and complete");
+                    startActivity(new Intent(subjectList.this,selectSubject.class));
                 }
-                //subList.clear();
             }
         });
 

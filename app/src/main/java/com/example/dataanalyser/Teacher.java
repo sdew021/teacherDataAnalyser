@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Teacher {
-    String sem,branch,id;
+    String sem, branch, id;
     int nOS;
     List<String> subjects;
 
@@ -50,7 +50,8 @@ public class Teacher {
         return subjects;
     }
 
-    public void setSubjects(List<String> sub){
+    public void setSubjects(List<String> sub) {
         this.subjects = sub;
     }
+
 }

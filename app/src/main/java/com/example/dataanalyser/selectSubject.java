@@ -20,18 +20,17 @@ public class selectSubject extends AppCompatActivity {
         Button activity = new Button(this);
 
 
-
         int i = 0;
-        Log.d("ssub","size " + Constants.teacher.getSubjects().size()  );
-        for(String sub : Constants.teacher.getSubjects()){
-            if(i == Constants.teacher.getnOS() ){
-                i=0;
+        Log.d("ssub", "size " + Constants.teacher.getSubjects().size());
+        for (String sub : Constants.teacher.getSubjects()) {
+            if (i == Constants.teacher.getnOS()) {
+                i = 0;
             }
             final Button b = new Button(this);
             b.setText(sub);
             myLinearLayout.addView(b);
             subButton[i] = b;
-            subButton[i].setId(i+1);
+            subButton[i].setId(i + 1);
 
             i++;
         }
@@ -39,13 +38,13 @@ public class selectSubject extends AppCompatActivity {
         activity.setText("Add Activity");
         myLinearLayout.addView(activity);
 
-        for(int j =0;j<Constants.teacher.getnOS();j++ ){
-            final Button b = myLinearLayout.findViewById(j+1);
+        for (int j = 0; j < Constants.teacher.getnOS(); j++) {
+            final Button b = myLinearLayout.findViewById(j + 1);
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(selectSubject.this,dataEntry.class);
-                    intent.putExtra("name",b.getText().toString());
+                    Intent intent = new Intent(selectSubject.this, dataEntry.class);
+                    intent.putExtra("name", b.getText().toString());
                     startActivity(intent);
                 }
             });
@@ -54,20 +53,19 @@ public class selectSubject extends AppCompatActivity {
         activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(selectSubject.this,addActivity.class);
+                Intent intent = new Intent(selectSubject.this, addActivity.class);
                 startActivity(intent);
             }
         });
-
 
 
     }
 
     @Override
     public void onBackPressed() {
-        if(true){
+        if (true) {
 
-        }else {
+        } else {
             super.onBackPressed();
         }
 
