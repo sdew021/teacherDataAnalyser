@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "47072979740",
+    "firebase_url": "https://teacherdataanalyser-25005.firebaseio.com",
+    "project_id": "teacherdataanalyser-25005",
+    "storage_bucket": "teacherdataanalyser-25005.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47072979740:android:fbe60f8d96e6950690a8d9",
+        "android_client_info": {
+          "package_name": "com.example.dataanalyser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47072979740-18counndak79qucpltsbf0phkq6tgal1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dataanalyser",
+            "certificate_hash": "3e86114ed76cd2056a7820f6e662751a96e0bc40"
+          }
+        },
+        {
+          "client_id": "47072979740-ktq3m5ihk0eu40ib8gsv0j58k5omhke0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJEe0GjH3JokADNcU9QcFO_yfaosGG4x0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47072979740-ktq3m5ihk0eu40ib8gsv0j58k5omhke0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
