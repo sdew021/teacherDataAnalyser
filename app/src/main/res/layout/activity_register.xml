@@ -8,19 +8,21 @@
 
     <TextView
         android:id="@+id/regname"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0E375F"
+        android:textColorHighlight="#E7E4E4"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-black"
         android:text="Registration"
         android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
         android:textSize="45dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="50dp" />
 
     <EditText
         android:id="@+id/username"
@@ -68,12 +70,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/create"
         tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/signup"
+        style="@android:style/Widget.Button"
         android:layout_width="254dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:hint="signup"
+        android:textColorHighlight="#000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"

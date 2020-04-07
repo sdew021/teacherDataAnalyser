@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         epass=(EditText)findViewById(R.id.pass);
         blogin=(Button)findViewById(R.id.login);
         bregister=(Button)findViewById(R.id.register);
-        forgot=(TextView) findViewById(R.id.forgot);
+
 
         blogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         bregister.setOnClickListener(new View.OnClickListener() {
             @Override
