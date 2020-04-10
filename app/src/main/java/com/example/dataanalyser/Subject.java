@@ -2,8 +2,17 @@ package com.example.dataanalyser;
 
 public class Subject {
     int classTaken,classTotal,marks1,marks2,marks3;
+    String subName;
 
     public Subject() {
+    }
+
+    public String getSubName() {
+        return subName;
+    }
+
+    public void setSubName(String subName) {
+        this.subName = subName;
     }
 
     public int getClassTaken() {
