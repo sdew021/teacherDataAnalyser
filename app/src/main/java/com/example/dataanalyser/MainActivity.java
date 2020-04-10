@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 checkId(ephone.getText().toString(),intent);
             }
         });
-
     }
 
     private void checkId(final String id, final Intent intent) {
