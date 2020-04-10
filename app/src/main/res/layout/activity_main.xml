@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CAE4C4"
+    android:background="@mipmap/png4e"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,51 +14,56 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="2sp"
-        android:text="Performance analyser"
+        android:text="Welcome to Digilyzer"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#0E375F"
+        android:layout_marginTop="20dp"
         android:textColorHighlight="#E7E4E4"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
-        android:src="@drawable/ic_launcher_foreground"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="80dp"
+        android:src="@mipmap/pngicon"
         app:layout_constraintBottom_toTopOf="@id/phone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/name" />
 
     <EditText
         android:id="@+id/phone"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="276dp"
+        android:layout_height="47dp"
         android:layout_margin="20dp"
-        android:hint="phone number"
+        android:layout_marginTop="80dp"
+        android:textColorHint="#0E0101"
+        android:hint="enter unique id"
         app:layout_constraintBottom_toTopOf="@id/login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/icon" />
 
 
     <Button
         android:id="@+id/login"
-        style="@android:style/Widget.Button"
+
         android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="48dp"
         android:text="login"
+        style="@android:style/Widget.Button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/phone" />
 

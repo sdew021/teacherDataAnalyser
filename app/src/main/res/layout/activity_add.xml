@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@mipmap/png4e"
     android:layout_height="match_parent"
     tools:context=".addActivity">
 
@@ -28,16 +29,21 @@
 
     <EditText
         android:id="@+id/date"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="60dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
         android:hint="Enter the date"
+        android:textColorHint="#0E0101"
+        app:layout_constraintBottom_toTopOf="@id/title"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        app:layout_constraintBottom_toTopOf="@id/title"/>
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
     <EditText
         android:id="@+id/title"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:textColorHint="#0E0101"
         android:layout_height="60dp"
         android:hint="Enter the title"
         app:layout_constraintTop_toBottomOf="@id/subject"
@@ -46,36 +52,43 @@
         app:layout_constraintEnd_toEndOf="parent"/>
     <EditText
         android:id="@+id/subject"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:hint="Enter the subject"
+        android:textColorHint="#0E0101"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintBottom_toTopOf="@id/desc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
     <EditText
         android:id="@+id/desc"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="386dp"
+        android:layout_height="247dp"
         android:gravity="top|left"
+        android:hint="Enter the description"
         android:inputType="textEmailAddress|textMultiLine"
         android:lines="20"
-        android:hint="Enter the description"
+        android:textColorHint="#0E0101"
         android:minLines="10"
-        android:scrollHorizontally="false"
         android:scrollbars="vertical"
-        app:layout_constraintTop_toBottomOf="@id/subject"
+        android:scrollHorizontally="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/subject" />
 
     <Button
         android:id="@+id/addAct"
+        style="@android:style/Widget.Button"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:text="Add Activity"
+        android:layout_marginTop="44dp"
         android:paddingHorizontal="15dp"
-        app:layout_constraintTop_toBottomOf="@id/desc"
+        android:text="Add Activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/desc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

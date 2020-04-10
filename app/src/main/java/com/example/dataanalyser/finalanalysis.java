@@ -144,7 +144,7 @@ public class finalanalysis extends AppCompatActivity {
         PieChart chart = (PieChart) findViewById(R.id.pie);
         chart.setData(data);
         chart.invalidate();
-        chart.animateY(1000);
+        chart.animateY(5000);
     }
 }
 

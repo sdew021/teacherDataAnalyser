@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aboutus">
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="234dp"
+        android:id="@+id/logo"
+        android:src="@mipmap/logo"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/logo"
+        android:text="Version: 1.0"
+        android:textSize="20dp"
+        android:layout_marginStart="30dp"
+        />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="178dp"
+        android:layout_below="@+id/txt"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-3dp"
+        android:text="Digilyser or Digital Analyer is basically data management,representation and
+analysing application.This application is designed to serve the purpose of
+increasing the performance and efficiency of planning procedure of educational
+institutions.
+"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="88dp"
+        android:id="@+id/txt2"
+        android:layout_height="31dp"
+        android:layout_below="@+id/txt1"
+        android:layout_marginStart="30dp"
+        android:text="TEAM:"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="96dp"
+                android:layout_below="@+id/txt2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="4dp"
+                android:text="1. Saurabh Devangan.G                          ( B.E 6th Sem )
+         CSE Dept                                                NITK Surathkal"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="wrap_content"
+                android:layout_height="96dp"
+                android:layout_below="@+id/txt3"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="0dp"
+                android:text="2. Mohan Raj.R                                            ( B.E 6th Sem )
+         ISE Dept                                                Cambridge Institute of Technology"
+                android:textSize="20dp" /> />
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_width="wrap_content"
+                android:layout_height="96dp"
+                android:layout_below="@+id/txt4"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="0dp"
+                android:text="3. Ankitha.VS                                            ( B.E 6th Sem )
+         CSE Dept                                                Cambridge Institute of Technology"
+                android:textSize="20dp" /> />
+
+            <TextView
+                android:id="@+id/txt6"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_below="@+id/txt5"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Contact us:"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="96dp"
+                android:id="@+id/txt7"
+                android:layout_below="@+id/txt6"
+                android:text="performanceanalysis608@gmail.com"
+                android:layout_marginStart="30dp"
+                android:textSize="18dp"
+
+                />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
